@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Séisme d’Al-Haouz</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    
+    <!-- Section Accueil (Home) -->
+    <header>
+        <img src="image/Logoiav.png" alt="Logo de mon site" class="logo">
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#carte">Carte</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#equipe">Équipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section Présentation -->
+    <section id="presentation">
+        <h2>Présentation:</h2>
+        <p>
+            Le séisme de 2023 au Maroc, également connu sous le nom de séisme d'Al Haouz, s'est produit le 8 septembre 2023 à 22 h 11 UTC (23 h 11 locale), avec une magnitude estimée entre Mw 6,7 et 6,9. Cet événement sismique, le plus puissant jamais enregistré dans l'histoire du pays, a eu son épicentre dans le Haut Atlas, à 71,8 km au sud-ouest de Marrakech, dans la commune rurale d'Ighil, en province d'Al Haouz. L'hypocentre a été localisé à une profondeur de 12 à 24 km. Moins de 20 minutes après le premier choc, une réplique significative de magnitude Mw 4,9 a été ressentie. Le bilan provisoire, communiqué par le ministère de l'Intérieur le 27 septembre, fait état de 2 960 morts et 6 125 blessés, avec près de 90 % des victimes concentrées dans les provinces d'Al Haouz et de Taroudant. Le séisme a causé des destructions massives, entraînant l'effondrement de nombreux bâtiments, et les secousses ont été ressenties au-delà des frontières, jusqu'au sud de l'Espagne, au Portugal, en Mauritanie et au sud-est de l'Algérie.
+        </p>
+        <img src="image/image1.PNG" alt="Illustration de présentation" class="image-droite">
+        <img src="image/image2.PNG" alt="Illustration de présentation" class="image-droite">
+    </section>
+
+    <!-- Section Carte -->
+    <section id="carte">
+        <h2>Situation avant /après de Douar El HNAIN</h2>
+        <p>Découvrez une comparaison visuelle saisissante grâce à des images satellitaires prises avant et après l'événement. Ces images permettent d’identifier clairement les bâtiments détruits et ceux qui ont résisté. En superposant ces données sur une carte interactive, nous mettons en évidence l'ampleur des dégâts et les zones épargnées, offrant un outil précieux pour l’analyse, la reconstruction et la prévention future.<p>
+        <div class="container">
+            <div id="map">
+                <div style="z-index: 9999999;" class="layer-controls">
+                    <button id="village2">Village 1</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas class="chart" id="pieChart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </section>
+
+   <!-- Section Carte2 -->
+   <section id="integration">
+        <h2>La Région de EL HAOUZ</h2>
+        <p>Découvrez les bâtiments par commune ainsi que leur état de conservation après le séisme, avec une légende  en bas.</p>
+        <div class="controls">
+            <!-- Insertion de la carte interactive dans un iframe -->
+            <iframe src="partie 1\carte2.html" width="1000" height="700"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+
+    <!-- Section Équipe -->
+    <section id="equipe">
+        <h2>Équipe :</h2>
+        <div class="team-member">
+            <h3>HOUR Mohamed</h3>
+            <p>Elève Ingénieur Topographe</p>
+            <p>Email: m.hour@iav.ac.ma</p>
+            <p>Téléphone: +212 700906430</p>
+        </div>
+        <div class="team-member">
+            <h3>JIHANI Youssef</h3>
+            <p>Elève Ingénieur Topographe</p>
+            <p>Email: y.jihani@iav.ac.ma</p>
+            <p>Téléphone: +212 660518441</p>
+        </div>
+        <div class="team-member">
+            <h3>FAHDI Karim</h3>
+            <p>Elève Ingénieur Topographe</p>
+            <p>Email: k.fahdi@iav.ac.ma</p>
+            <p>Téléphone: +212 605063287</p>
+        </div>
+        <div class="team-member">
+            <h3>EL HAMDAOUI Othmane</h3>
+            <p>Elève Ingénieur Topographe</p>
+            <p>Email: O.elhamdaoui@iav.ac.ma</p>
+            <p>Téléphone: +212 612747877</p>
+        </div>
+        <div class="team-member">
+            <h3>El MAMOUNI Ayoub</h3>
+            <p>Elève Ingénieur Topographe</p>
+            <p>Email: A.elmamouni@iav.ac.ma</p>
+            <p>Téléphone: +212 633889824</p>
+        </div>
+    </section>
+
+    <!-- Leaflet library -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Required libraries for side-by-side control and georaster support -->
+    <script src="js1/leaflet-side-by-side.min.js"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js1/script2.js"></script>
+</body>
+</html>
